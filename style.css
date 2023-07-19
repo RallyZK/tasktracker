@@ -1,5 +1,69 @@
 * {
-  margin: 1px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  margin: 25px 0;
+}
+
+h3 {
+  margin: 25px 0;
+}
+
+.tasks-list {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.tasks-wrapper,
+.add-task-wrapper,
+.removed-tasks-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.add-task-wrapper {
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 25px 0;
+}
+
+.task-btn {
+width: 20%;
+}
+
+.task-input {
+  width: 80%;
+}
+
+.tasks-ul {
+  padding: 0;
+}
+
+.task-li,
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  font-size: 20px;
+}
+
+.deleteBtn,
+.doneBtn {
+  display: block;
+  height: 25px;
+  width: 25px;
+}
+
+.deleteBtn {
+   width: max-content;
+}
+
+li {
+  list-style: none;
 }
 
 .checked {
@@ -12,11 +76,9 @@
 
 .removed-tasks-ul {
   min-height: 100px;
-  background-color: beige;
+  background-color: rgb(212, 212, 211);
 }
 
 .hidden {
   display: none;
 }
-
-
