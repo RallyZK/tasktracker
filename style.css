@@ -10,9 +10,13 @@
   min-height: 100px;
 }
 
-.removed-tasks-wrapper {
+.removed-tasks-ul {
   min-height: 100px;
   background-color: beige;
+}
+
+.hidden {
+  display: none;
 }
 
 

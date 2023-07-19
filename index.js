@@ -2,6 +2,9 @@ const taskInput = document.getElementById("description");
 const addButton = document.getElementById("add-task-btn");
 const taskUL = document.querySelector(".tasks-ul");
 const removedTasksUl = document.querySelector(".removed-tasks-ul");
+const trashBinBtn = document.querySelector(".showTrashBin");
+const selectAllBtn = document.querySelector(".select-all-tasks");
+const deleteAllBtn = document.querySelector(".delete-all-tasks");
 let taskli = document.querySelectorAll(".task-li");
 
 let tasksList = [];
@@ -83,10 +86,16 @@ function renderTask(task) {
   <li class="${cssClassDiv}" id="${task.id}">
     <div class="${cssClass}">${task.task}</div>
       <div class="buttons">
-      <button class="doneBtn" data-action="done" />Выполнено</button>
+      <input type="checkbox" class="doneBtn" data-action="done"/>
       <button class="deleteBtn" data-action="delete">Удалить</button>
     </div>
   </li>
   `;
   taskUL.insertAdjacentHTML("afterbegin", taskHTML);
+}
+
+trashBinBtn.addEventListener("click", showRemovedTasks);
+
+function showRemovedTasks() {
+  removedTasksUl.classList.toggle("hidden");
 }
